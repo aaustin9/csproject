@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Name:"
+        android:id="@+id/firstNameHeader"
+        android:textSize="20dp"
+        android:layout_gravity="right"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Name"
+        android:id="@+id/firstNameOutput"
+        android:textSize="20dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_gravity="right"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="88dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="160dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name:"
+        android:id="@+id/lastNameHeader"
+        android:textSize="20dp"
+        android:layout_gravity="right"
+        android:layout_below="@+id/firstNameHeader"
+        android:layout_alignLeft="@+id/firstNameHeader"
+        android:layout_alignStart="@+id/firstNameHeader"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name"
+        android:id="@+id/lastNameOutput"
+        android:textSize="20dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_gravity="right"
+        android:layout_alignTop="@+id/lastNameHeader"
+        android:layout_alignLeft="@+id/firstNameOutput"
+        android:layout_alignStart="@+id/firstNameOutput" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender:"
+        android:id="@+id/genderHeader"
+        android:textSize="20dp"
+        android:layout_gravity="right"
+        android:layout_below="@+id/lastNameHeader"
+        android:layout_alignLeft="@+id/lastNameHeader"
+        android:layout_alignStart="@+id/lastNameHeader"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        android:id="@+id/genderOutput"
+        android:textSize="20dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_gravity="right"
+        android:layout_below="@+id/lastNameOutput"
+        android:layout_alignLeft="@+id/lastNameOutput"
+        android:layout_alignStart="@+id/lastNameOutput" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EVENTS"
+        android:id="@+id/eventsTitle"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_gravity="right"
+        android:layout_below="@+id/genderHeader"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/event1"
+        android:textSize="16dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_gravity="right"
+        android:layout_below="@+id/eventsTitle"
+        android:layout_alignLeft="@+id/eventsTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="2dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/event2"
+        android:textSize="16dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_gravity="right"
+        android:layout_below="@+id/event1"
+        android:layout_alignLeft="@+id/eventsTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="2dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/event3"
+        android:textSize="16dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_gravity="right"
+        android:layout_below="@+id/event2"
+        android:layout_alignLeft="@+id/eventsTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="2dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/event4"
+        android:textSize="16dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_gravity="right"
+        android:layout_below="@+id/event3"
+        android:layout_alignLeft="@+id/eventsTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="2dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/event5"
+        android:textSize="16dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_gravity="right"
+        android:layout_below="@+id/event4"
+        android:layout_alignLeft="@+id/eventsTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="2dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/event6"
+        android:textSize="16dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_gravity="right"
+        android:layout_below="@+id/event5"
+        android:layout_alignLeft="@+id/eventsTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="2dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/event7"
+        android:textSize="16dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_gravity="right"
+        android:layout_below="@+id/event6"
+        android:layout_alignLeft="@+id/eventsTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="2dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/event8"
+        android:textSize="16dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_gravity="right"
+        android:layout_below="@+id/event7"
+        android:layout_alignLeft="@+id/eventsTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="2dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/event9"
+        android:textSize="16dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_gravity="right"
+        android:layout_below="@+id/event8"
+        android:layout_alignLeft="@+id/eventsTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="2dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/event10"
+        android:textSize="16dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_gravity="right"
+        android:layout_below="@+id/event9"
+        android:layout_alignLeft="@+id/eventsTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="2dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RELATIONS"
+        android:id="@+id/textView6"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_gravity="right"
+        android:layout_alignTop="@+id/event10"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Father:"
+        android:id="@+id/fatherHeader"
+        android:textSize="20dp"
+        android:layout_gravity="right"
+        android:layout_below="@+id/textView6"
+        android:layout_toRightOf="@+id/event10"
+        android:layout_toEndOf="@+id/event10" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(none)"
+        android:id="@+id/fatherOutput"
+        android:textSize="20dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_gravity="right"
+        android:layout_alignTop="@+id/fatherHeader"
+        android:layout_alignLeft="@+id/genderOutput"
+        android:layout_alignStart="@+id/genderOutput" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mother:"
+        android:id="@+id/motherHeader"
+        android:textSize="20dp"
+        android:layout_gravity="right"
+        android:layout_below="@+id/fatherHeader"
+        android:layout_toRightOf="@+id/event10"
+        android:layout_toEndOf="@+id/event10" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(none)"
+        android:id="@+id/motherOutput"
+        android:textSize="20dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_gravity="right"
+        android:layout_alignTop="@+id/motherHeader"
+        android:layout_alignLeft="@+id/fatherOutput"
+        android:layout_alignStart="@+id/fatherOutput" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spouse:"
+        android:id="@+id/spouseHeader"
+        android:textSize="20dp"
+        android:layout_gravity="right"
+        android:layout_below="@+id/motherHeader"
+        android:layout_toRightOf="@+id/event10"
+        android:layout_toEndOf="@+id/event10" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(none)"
+        android:id="@+id/spouseOutput"
+        android:textSize="20dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_gravity="right"
+        android:layout_alignTop="@+id/spouseHeader"
+        android:layout_alignLeft="@+id/motherOutput"
+        android:layout_alignStart="@+id/motherOutput" />
+
+</RelativeLayout>
