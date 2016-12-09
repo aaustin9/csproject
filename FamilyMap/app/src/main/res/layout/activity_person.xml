@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <!--TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="First Name:"
@@ -89,23 +89,14 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true" /-->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:id="@+id/event1"
-        android:textSize="16dp"
-        android:textColor="@android:color/holo_blue_light"
-        android:layout_gravity="right"
-        android:layout_below="@+id/eventsTitle"
-        android:layout_alignLeft="@+id/eventsTitle"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="2dp"
-        />
+    <ExpandableListView
+        android:id="@+id/lvExp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
 
-    <TextView
+    <!--TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
@@ -229,17 +220,17 @@
         android:layout_alignLeft="@+id/eventsTitle"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="2dp"
-        />
+        /-->
 
-    <TextView
+    <!--TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RELATIONS"
+        android:text="FAMILY RELATIONS"
         android:id="@+id/textView6"
         android:textSize="20dp"
         android:textStyle="bold"
         android:layout_gravity="right"
-        android:layout_alignTop="@+id/event10"
+        android:layout_below="@+id/lvExp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -251,8 +242,8 @@
         android:textSize="20dp"
         android:layout_gravity="right"
         android:layout_below="@+id/textView6"
-        android:layout_toRightOf="@+id/event10"
-        android:layout_toEndOf="@+id/event10" />
+        android:layout_alignLeft="@+id/firstNameHeader"
+        android:layout_alignTop="@+id/firstNameHeader"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -274,8 +265,8 @@
         android:textSize="20dp"
         android:layout_gravity="right"
         android:layout_below="@+id/fatherHeader"
-        android:layout_toRightOf="@+id/event10"
-        android:layout_toEndOf="@+id/event10" />
+        android:layout_alignLeft="@+id/firstNameHeader"
+        android:layout_alignTop="@+id/firstNameHeader" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -297,8 +288,8 @@
         android:textSize="20dp"
         android:layout_gravity="right"
         android:layout_below="@+id/motherHeader"
-        android:layout_toRightOf="@+id/event10"
-        android:layout_toEndOf="@+id/event10" />
+        android:layout_alignLeft="@+id/firstNameHeader"
+        android:layout_alignTop="@+id/firstNameHeader" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -310,6 +301,6 @@
         android:layout_gravity="right"
         android:layout_alignTop="@+id/spouseHeader"
         android:layout_alignLeft="@+id/motherOutput"
-        android:layout_alignStart="@+id/motherOutput" />
+        android:layout_alignStart="@+id/motherOutput" /-->
 
 </RelativeLayout>

@@ -10,7 +10,7 @@
     android:layout_height="match_parent"
     tools:context="toromu.familymap.MainActivity" />
 
-    <LinearLayout
+    <RelativeLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,13 +20,26 @@
         android:background="@android:color/white"
         android:onClick="openPersonActivity">
 
+        <ImageView
+            android:id="@+id/personIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/android"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Click a marker"
             android:id="@+id/personName"
             android:layout_gravity="center_horizontal"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -34,6 +47,11 @@
             android:text="to view person&apos;s info"
             android:id="@+id/eventDetails"
             android:layout_gravity="center_horizontal"
-            android:textSize="16dp" />
-    </LinearLayout>
+            android:layout_centerHorizontal="true"
+            android:textSize="16dp"
+            android:layout_below="@+id/personName" />
+
+
+
+    </RelativeLayout>
 </RelativeLayout>

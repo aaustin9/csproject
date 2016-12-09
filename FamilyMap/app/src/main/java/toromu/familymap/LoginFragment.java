@@ -58,6 +58,19 @@ public class LoginFragment extends Fragment {
         setHasOptionsMenu(true);
     }
 
+    public void login(String username, String password, String server) {
+        try {
+            URL url = new URL("http://" + server + "/user/login");
+            Model.SINGLETON.setCredentials(username, password, server);
+            loginTask = new LoginTask();
+            loginTask.setQuery("{username:\"" + username + "\",password:\"" + password + "\"}");
+            loginTask.execute(url);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Toast.makeText(getContext(), "Login was unsuccessful!  Please try again.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -80,15 +93,7 @@ public class LoginFragment extends Fragment {
                 if (usernameInput.length() == 0 || passwordInput.length() == 0 || serverHostInput.length() == 0 || serverPortInput.length() == 0) {
                     Toast.makeText(getContext(), "Each field must contain at least 1 character.", Toast.LENGTH_LONG).show();
                 } else {
-                    try {
-                        URL url = new URL("http://" + serverHostInput + ":" + serverPortInput + "/user/login");
-                        loginTask = new LoginTask();
-                        loginTask.setQuery("{username:\"" + usernameInput + "\",password:\"" + passwordInput + "\"}");
-                        loginTask.execute(url);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                        Toast.makeText(getContext(), "Login was unsuccessful!  Please try again.", Toast.LENGTH_SHORT).show();
-                    }
+                    login(usernameInput, passwordInput, serverHostInput+":"+serverPortInput);
                 }
             }
         });
@@ -99,6 +104,8 @@ public class LoginFragment extends Fragment {
         String authorization, output, personId, query, server;
         boolean isFinished = true;
         NameTask nameTask;
+
+        public LoginTask() {}
 
         protected Long doInBackground(URL... urls) {
             isFinished = false;
@@ -143,6 +150,7 @@ public class LoginFragment extends Fragment {
                     JSONObject jsonObject = new JSONObject(output);
                     authorization = jsonObject.getString("Authorization");
                     personId = jsonObject.getString("personId");
+                    Model.SINGLETON.setRootPersonId(personId);
                     URL url = new URL("http://" + server + "/person/" + personId);
                     nameTask = new NameTask();
                     nameTask.setAuthorization(authorization);
@@ -221,7 +229,6 @@ public class LoginFragment extends Fragment {
                 main.authenticate();
             } catch (Exception e) {
                 e.printStackTrace();
-                Toast.makeText(getContext(), "Failed to access person information", Toast.LENGTH_SHORT).show();
             }
         }
     }
